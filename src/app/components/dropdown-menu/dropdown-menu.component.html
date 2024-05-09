@@ -1,0 +1,26 @@
+<button
+  hlmBtn
+  variant="ghost"
+  align="end"
+  [brnMenuTriggerFor]="menu"
+  class="flex items-center justify-center gap-2"
+>
+  <img src="../../../assets/vn-flag.svg" alt="" class="h-8 inline-block" />
+  <span>{{ currentLanguage }}</span>
+
+  <hlm-icon name="lucideChevronDown" hlmMenuIcon />
+</button>
+<ng-template #menu>
+  <hlm-menu class="w-44">
+    <hlm-menu-group>
+      <button
+        hlmMenuItem
+        *ngFor="let language of languageList; index as i"
+        class="flex justify-start items-center gap-3 cursor-pointer"
+      >
+        <img src="{{ language.flag }}" alt="" class="h-8 inline-block" />
+        <span>{{ language.name }}</span>
+      </button>
+    </hlm-menu-group>
+  </hlm-menu>
+</ng-template>

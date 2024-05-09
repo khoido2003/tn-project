@@ -1,0 +1,62 @@
+<div class="max-w-screen-xl py-4 px-2 m-auto">
+  <div class="flex justify-between items-center">
+    <a href="" routerLink="/home" class="inline-block">
+      <img src="../../../assets/logo-svg.svg" alt="Logo" class="sm:h-14" />
+    </a>
+
+    <!-- DESKTOP SIZE -->
+    <div class="justify-center items-center sm:gap-1 md:gap-10 hidden sm:flex">
+      <button hlmBtn variant="primary">Đăng ký doanh nghiệp</button>
+      <app-dropdown-menu
+        [currentLanguage]="currentLanguage"
+        [languageList]="languageList"
+      ></app-dropdown-menu>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <button
+      hlmBtn
+      variant="ghost"
+      class="sm:hidden block"
+      [brnMenuTriggerFor]="mobileHeaderMenu"
+    >
+      <hlm-icon size="lg" name="lucideMenu"> </hlm-icon>
+    </button>
+
+    <ng-template #mobileHeaderMenu>
+      <hlm-menu class="w-56">
+        <hlm-menu-group>
+          <button hlmMenuItem>
+            <button hlmBtn variant="primary">Đăng ký doanh nghiệp</button>
+          </button>
+
+          <button
+            hlmMenuItem
+            [brnMenuTriggerFor]="languge"
+            class="flex items-center justify-start gap-2"
+          >
+            <img
+              src="../../../assets/vn-flag.svg"
+              alt=""
+              class="h-8 inline-block"
+            />
+            <span>{{ currentLanguage }}</span>
+          </button>
+        </hlm-menu-group>
+      </hlm-menu>
+    </ng-template>
+
+    <ng-template #languge>
+      <hlm-sub-menu>
+        <button
+          hlmMenuItem
+          *ngFor="let language of languageList; index as i"
+          class="flex justify-start items-center gap-3 cursor-pointer"
+        >
+          <img src="{{ language.flag }}" alt="" class="h-8 inline-block" />
+          <span>{{ language.name }}</span>
+        </button>
+      </hlm-sub-menu>
+    </ng-template>
+  </div>
+</div>
