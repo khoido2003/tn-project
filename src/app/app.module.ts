@@ -23,6 +23,7 @@ import { HlmMenuSeparatorComponent } from './ui/ui-menu-helm/src/lib/hlm-menu-se
 import { HlmMenuItemIconDirective } from './ui/ui-menu-helm/src/lib/hlm-menu-item-icon.directive';
 import { HlmMenuGroupComponent } from './ui/ui-menu-helm/src/lib/hlm-menu-group.component';
 import { lucideChevronDown, lucideMenu } from '@ng-icons/lucide';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { lucideChevronDown, lucideMenu } from '@ng-icons/lucide';
     HeaderComponent,
     FooterComponent,
     DropdownMenuComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,

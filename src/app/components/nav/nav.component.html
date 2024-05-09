@@ -1,0 +1,12 @@
+<nav class="bg-primary">
+  <ul class="max-w-screen-xl flex justify-evenly items-center h-12 text-white">
+    <li
+      class="hover:bg-secondary hover:py-3 hover:px-2 px-2 {{
+        url === nav.link && 'active-link'
+      }}"
+      *ngFor="let nav of navList; index as i"
+    >
+      <a routerLink="{{ nav.link }}">{{ nav.name }}</a>
+    </li>
+  </ul>
+</nav>
