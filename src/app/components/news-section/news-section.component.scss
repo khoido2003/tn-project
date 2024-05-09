@@ -1,0 +1,11 @@
+.btn--active {
+  @apply font-semibold bg-white border-black border-2 text-black  rounded-sm w-44;
+}
+
+.btn--inactive {
+  @apply font-semibold bg-transparent border-none text-black  rounded-sm w-44;
+}
+
+.separator {
+  @apply w-full m-auto bg-gray-300 h-[1px] my-4;
+}

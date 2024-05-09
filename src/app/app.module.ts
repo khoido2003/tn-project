@@ -38,6 +38,7 @@ import { HlmCarouselNextComponent } from './ui/ui-carousel-helm/src/lib/hlm-caro
 import { HlmCarouselPreviousComponent } from './ui/ui-carousel-helm/src/lib/hlm-carousel-previous.component';
 import { CodeSearchComponent } from './components/code-search/code-search.component';
 import { HlmInputDirective } from './ui/ui-input-helm/src/lib/hlm-input.directive';
+import { NewsSectionComponent } from './components/news-section/news-section.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { HlmInputDirective } from './ui/ui-input-helm/src/lib/hlm-input.directiv
     NavComponent,
     CarouselComponent,
     CodeSearchComponent,
+    NewsSectionComponent,
   ],
   imports: [
     BrowserModule,

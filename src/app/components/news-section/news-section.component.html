@@ -1,0 +1,98 @@
+<div
+  class="px-3 mt-8 gap-5 lg:gap-0 grid lg:grid-cols-9 md:grid-cols-7 sm:grid-cols-4 rounded-md overflow-hidden"
+>
+  <div
+    class="col-span-4 bg-gray-100 cursor-pointer sm:rounded-s-md sm:rounded-none rounded-md overflow-hidden"
+  >
+    <div class="relative cursor-pointer">
+      <img
+        src="../../../assets/tea-news.webp"
+        class="w-full aspect-4/3 object-cover"
+        alt=""
+      />
+      <div
+        class="bg-black/40 hover:bg-black/30 absolute top-0 bottom-0 left-0 right-0"
+      ></div>
+      <div class="flex flex-col z-30 absolute bottom-0 text-white p-5 px-8">
+        <p class="text-[1.5rem] mb-4 font-semibold">
+          Democrats OverHaul Party's Primary Calendar, Upending a Political
+          Tradition
+        </p>
+        <p class="text-xs">04/05/2023</p>
+      </div>
+    </div>
+
+    <p class="text-primary font-semibold text-sm p-4 mt-4">
+      The new Netflix show "Cunk on Earth" looks like an ambitious BBC
+      documentary. Until its fictional host, created by Charlie Brooker, starts
+      to ask some deeply silly questions.
+    </p>
+  </div>
+  <div
+    class="md:col-span-3 col-span-4 bg-gray-100 sm:rounded-e-md sm:rounded-none rounded-md overflow-hidden lg:mr-3 mr-0 py-3 px-3"
+  >
+    <div class="flex items-center justify-center gap-2">
+      <button
+        hlmBtn
+        [ngClass]="btnType === '1' ? 'btn--active' : 'btn--inactive'"
+        (click)="changeBtnType('1')"
+      >
+        Tin mới nhất
+      </button>
+      <button
+        hlmBtn
+        [ngClass]="btnType === '2' ? 'btn--active' : 'btn--inactive'"
+        (click)="changeBtnType('2')"
+      >
+        Tin nổi bật
+      </button>
+    </div>
+
+    <div *ngFor="let news of latestNews; index as i" class="cursor-pointer">
+      <div class="separator"></div>
+
+      <div
+        class="flex gap-3 justify-center items-center hover:bg-black/10 py-2 px-2 rounded-md"
+      >
+        <img
+          src="{{ news.imgSrc }}"
+          alt="tea news"
+          class="w-16 aspect-square object-cover"
+        />
+        <div class="flex flex-col gap-1 pr-6">
+          <h4 class="text-base font-semibold">
+            {{ news.header }}
+          </h4>
+          <p class="text-xs text-gray-400 font-semibold">
+            {{ news.dateAdded }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div></div>
+  </div>
+  <div
+    class="lg:col-span-2 md:col-span-7 col-span-4 bg-gray-100 rounded-md overflow-hidden"
+  >
+    <img
+      src="../../../assets/map-tn.png"
+      alt="map"
+      class="aspect-square object-cover block"
+    />
+
+    <div class="p-3">
+      <h4 class="text-base text-primary font-bold uppercase">
+        Bản đồ chè Thái Nguyên
+      </h4>
+      <p class="mt-2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+        explicabo laborum iure repellendus rerum molestias do at recusandae quia
+        nam .
+      </p>
+      <button hlmBtn class="mt-6 rounded-none w-40 font-normal">
+        <a href="#"> Xem bản đồ </a>
+      </button>
+    </div>
+  </div>
+</div>
