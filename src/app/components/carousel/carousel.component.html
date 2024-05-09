@@ -1,0 +1,21 @@
+<div class="w-full flex items-center justify-center h-[500px]">
+  <hlm-carousel class="w-full">
+    <hlm-carousel-content class="">
+      @for (item of items; track item) {
+      <hlm-carousel-item>
+        <div class="">
+          <section hlmCard>
+            <div hlmCardContent class="flex items-center justify-center">
+              <img
+                src="{{ item }}"
+                alt="carousel picture"
+                class="block h-[500px] w-full object-cover"
+              />
+            </div>
+          </section>
+        </div>
+      </hlm-carousel-item>
+      }
+    </hlm-carousel-content>
+  </hlm-carousel>
+</div>

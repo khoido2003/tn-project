@@ -22,8 +22,22 @@ import { HlmMenuShortcutComponent } from './ui/ui-menu-helm/src/lib/hlm-menu-sho
 import { HlmMenuSeparatorComponent } from './ui/ui-menu-helm/src/lib/hlm-menu-separator.component';
 import { HlmMenuItemIconDirective } from './ui/ui-menu-helm/src/lib/hlm-menu-item-icon.directive';
 import { HlmMenuGroupComponent } from './ui/ui-menu-helm/src/lib/hlm-menu-group.component';
-import { lucideChevronDown, lucideMenu } from '@ng-icons/lucide';
+import {
+  lucideChevronDown,
+  lucideMenu,
+  lucidePictureInPicture2,
+  lucideScanLine,
+  lucideSearch,
+} from '@ng-icons/lucide';
 import { NavComponent } from './components/nav/nav.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { HlmCarouselComponent } from './ui/ui-carousel-helm/src/lib/hlm-carousel.component';
+import { HlmCarouselContentComponent } from './ui/ui-carousel-helm/src/lib/hlm-carousel-content.component';
+import { HlmCarouselItemComponent } from './ui/ui-carousel-helm/src/lib/hlm-carousel-item.component';
+import { HlmCarouselNextComponent } from './ui/ui-carousel-helm/src/lib/hlm-carousel-next.component';
+import { HlmCarouselPreviousComponent } from './ui/ui-carousel-helm/src/lib/hlm-carousel-previous.component';
+import { CodeSearchComponent } from './components/code-search/code-search.component';
+import { HlmInputDirective } from './ui/ui-input-helm/src/lib/hlm-input.directive';
 
 @NgModule({
   declarations: [
@@ -34,6 +48,8 @@ import { NavComponent } from './components/nav/nav.component';
     FooterComponent,
     DropdownMenuComponent,
     NavComponent,
+    CarouselComponent,
+    CodeSearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +57,7 @@ import { NavComponent } from './components/nav/nav.component';
 
     BrnMenuTriggerDirective,
     HlmButtonDirective,
+    HlmInputDirective,
     HlmIconComponent,
 
     HlmMenuComponent,
@@ -52,8 +69,22 @@ import { NavComponent } from './components/nav/nav.component';
     HlmMenuSeparatorComponent,
     HlmMenuItemIconDirective,
     HlmMenuGroupComponent,
+
+    HlmCarouselComponent,
+    HlmCarouselContentComponent,
+    HlmCarouselItemComponent,
+    HlmCarouselNextComponent,
+    HlmCarouselPreviousComponent,
   ],
-  providers: [provideIcons({ lucideChevronDown, lucideMenu })],
+  providers: [
+    provideIcons({
+      lucideChevronDown,
+      lucideMenu,
+      lucideSearch,
+      lucideScanLine,
+      lucidePictureInPicture2,
+    }),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
