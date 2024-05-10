@@ -44,6 +44,7 @@ import { HlmInputDirective } from './ui/ui-input-helm/src/lib/hlm-input.directiv
 import { NewsSectionComponent } from './components/news-section/news-section.component';
 import { HighlightProductsComponent } from './components/highlight-products/highlight-products.component';
 import { HighlightCompanyComponent } from './components/highlight-company/highlight-company.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { HighlightCompanyComponent } from './components/highlight-company/highli
     NewsSectionComponent,
     HighlightProductsComponent,
     HighlightCompanyComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
