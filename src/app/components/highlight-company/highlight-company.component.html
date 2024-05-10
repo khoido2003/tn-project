@@ -1,0 +1,59 @@
+<div class="px-4 mt-14">
+  <div class="flex justify-between items-center">
+    <h4 class="mt-7 mb-4 font-bold">Doanh nghiệp nổi bật</h4>
+    <button
+      hlmBtn
+      variant="primary"
+      class="bg-black px-4 py-0 text-xs hover:bg-black/80"
+    >
+      Xem tất cả
+    </button>
+  </div>
+
+  <div
+    class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-3"
+  >
+    <div
+      class="border-2 border-gray-300 p-2 rounded-md"
+      *ngFor="let item of list"
+    >
+      <div class="flex items-center gap-3">
+        <img
+          src="../../../assets/Home.png"
+          alt="business"
+          class="w-16 aspect-square"
+        />
+
+        <div class="flex flex-col">
+          <h5 class="font-semibold cursor-pointer">Công ty Tnhh Chè Á Châu</h5>
+          <p class="text-xs text-gray-500">
+            Số 312, P.Xuân Lam, Tp.Thái Nguyên
+          </p>
+
+          <div class="flex items-center mt-2 gap-4">
+            <button
+              class="bg-[#EEF6F5] text-primary rounded-full px-4 py-1 font-semibold text-xs flex items-center justify-center"
+            >
+              <hlm-icon
+                size="sm"
+                name="lucideCornerDownRight"
+                class="-rotate-180"
+              ></hlm-icon>
+              Chỉ đường
+            </button>
+            <button
+              class="bg-gray-100 rounded-full px-4 py-1 font-semibold text-xs flex items-center justify-center gap-1"
+            >
+              <hlm-icon
+                size="sm"
+                name="lucidePhone
+              "
+              ></hlm-icon>
+              0912184463
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

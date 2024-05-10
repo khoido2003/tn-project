@@ -24,10 +24,13 @@ import { HlmMenuItemIconDirective } from './ui/ui-menu-helm/src/lib/hlm-menu-ite
 import { HlmMenuGroupComponent } from './ui/ui-menu-helm/src/lib/hlm-menu-group.component';
 import {
   lucideChevronDown,
+  lucideCornerDownRight,
   lucideMenu,
+  lucidePhone,
   lucidePictureInPicture2,
   lucideScanLine,
   lucideSearch,
+  lucideStar,
 } from '@ng-icons/lucide';
 import { NavComponent } from './components/nav/nav.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
@@ -39,6 +42,8 @@ import { HlmCarouselPreviousComponent } from './ui/ui-carousel-helm/src/lib/hlm-
 import { CodeSearchComponent } from './components/code-search/code-search.component';
 import { HlmInputDirective } from './ui/ui-input-helm/src/lib/hlm-input.directive';
 import { NewsSectionComponent } from './components/news-section/news-section.component';
+import { HighlightProductsComponent } from './components/highlight-products/highlight-products.component';
+import { HighlightCompanyComponent } from './components/highlight-company/highlight-company.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +57,8 @@ import { NewsSectionComponent } from './components/news-section/news-section.com
     CarouselComponent,
     CodeSearchComponent,
     NewsSectionComponent,
+    HighlightProductsComponent,
+    HighlightCompanyComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,6 +92,9 @@ import { NewsSectionComponent } from './components/news-section/news-section.com
       lucideSearch,
       lucideScanLine,
       lucidePictureInPicture2,
+      lucideStar,
+      lucideCornerDownRight,
+      lucidePhone,
     }),
   ],
   bootstrap: [AppComponent],
