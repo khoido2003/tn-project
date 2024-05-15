@@ -11,29 +11,34 @@
   </div>
 
   <div
-    class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-items-center gap-3"
+    class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-items-center sm:gap-3 gap-5"
   >
     <div
-      class="md:w-72 cursor-pointer hover:bg-black/10 p-2 rounded-md w-80"
-      *ngFor="let item of list; index as i"
+      class="md:w-72 cursor-pointer hover:bg-black/10 p-2 rounded-md sm:w-80 w-full"
+      *ngFor="let product of products; index as i"
     >
-      <img
-        src="../../../assets/tea-2-news.webp"
-        alt="tea"
-        class="w-full aspect-video object-cover rounded-md"
-      />
-      <h6 class="mt-3 font-semibold">Chè tươi Thái Nguyên</h6>
-      <p class="text-gray-600">Công ty xuất khẩu chè A</p>
-      <div class="flex items-center gap-3 mt-3">
-        <div class="flex items-center justify-center">
-          <img src="../../../assets/star.svg" alt="star" class="w-5 h-5" />
-          <img src="../../../assets/star.svg" alt="star" class="w-5 h-5" />
-          <img src="../../../assets/star.svg" alt="star" class="w-5 h-5" />
-          <img src="../../../assets/star.svg" alt="star" class="w-5 h-5" />
-          <img src="../../../assets/star.svg" alt="star" class="w-5 h-5" />
+      <a routerLink="{{ getRouteLink(product._id) }}" class="block">
+        <img
+          src="{{ product.previewImg }}"
+          alt="tea"
+          class="w-full aspect-video object-cover rounded-md"
+        />
+
+        <h6 class="mt-3 font-semibold">{{ product.name }}</h6>
+
+        <p class="text-gray-600 text-sm">{{ product.manufacturerId.name }}</p>
+        <div class="flex items-center gap-3 mt-3">
+          <div class="flex items-center justify-center">
+            <img
+              src="../../../assets/star.svg"
+              *ngFor="let item of getStarArray(product.star)"
+              alt="star"
+              class="w-5 h-5"
+            />
+          </div>
+          <p class="text-sm text-gray-500">{{ product.reviewNum }} đánh giá</p>
         </div>
-        <p class="text-sm text-gray-500">12 đánh giá</p>
-      </div>
+      </a>
     </div>
   </div>
 </div>

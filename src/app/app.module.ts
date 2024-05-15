@@ -45,6 +45,9 @@ import { NewsSectionComponent } from './components/news-section/news-section.com
 import { HighlightProductsComponent } from './components/highlight-products/highlight-products.component';
 import { HighlightCompanyComponent } from './components/highlight-company/highlight-company.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { CarouselComponentComponent } from './components/carousel-component/carousel-component.component';
 
 @NgModule({
   declarations: [
@@ -61,8 +64,11 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     HighlightProductsComponent,
     HighlightCompanyComponent,
     ContactFormComponent,
+    ProductDetailComponent,
+    CarouselComponentComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
 
